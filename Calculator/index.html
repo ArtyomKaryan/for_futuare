@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ուսանողի Բյուջե Հաշվիչ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ուսանողի Բյուջե Հաշվիչ</h1>
+        
+        <label for="budgetInput">Մուտքագրեք բյուջեն (դր.)</label>
+        <input type="number" id="budgetInput" placeholder="Բյուջե" />
+        
+        <button onclick="calculateBudget()">Հաշվել</button>
+        
+        <div id="result" class="result">
+            <h2>Բաշխված Բյուջե</h2>
+            <ul>
+                <li><strong>Խնայողություն:</strong> <span id="savings"></span></li>
+                <li><strong>Կոմունալ ծախսեր:</strong> <span id="utilities"></span></li>
+                <li><strong>Այլ ծախսեր:</strong> <span id="otherExpenses"></span></li>
+                <li><strong>Ժամանց:</strong> <span id="entertainment"></span></li>
+                <li><strong>Ուտելիք:</strong> <span id="food"></span></li>
+                <li><strong>Բնակարանի վարձ:</strong> <span id="rent"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Budget Calculator</h1>
+        
+        <label for="budgetInput">Enter your budget (AMD):</label>
+        <input type="number" id="budgetInput" placeholder="Enter budget" />
+
+        <button onclick="calculateBudget()">Calculate</button>
+
+        <div id="result" class="result">
+            <h2>Budget Breakdown</h2>
+            <ul>
+                <li><strong>Savings:</strong> <span id="savings"></span></li>
+                <li><strong>Utilities:</strong> <span id="utilities"></span></li>
+                <li><strong>Other Expenses:</strong> <span id="otherExpenses"></span></li>
+                <li><strong>Entertainment:</strong> <span id="entertainment"></span></li>
+                <li><strong>Food:</strong> <span id="food"></span></li>
+                <li><strong>Rent:</strong> <span id="rent"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

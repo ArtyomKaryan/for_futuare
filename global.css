@@ -1,0 +1,41 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+    --yellow: #F2B749;
+    --light-yellow: #F2CC85;
+    --blue: #3392D5;
+    --dark-blue: #023373;
+    --white: #fff;
+    --light-gray: #F2F2F2;
+
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-weight-black: 900;
+
+    --transition: .5s;
+  }
