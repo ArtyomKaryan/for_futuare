@@ -720,6 +720,12 @@
 }
 
 @media (max-width: 576px) {
+        .footer-contact ul li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .container {
         padding: 0 1rem;
     }
