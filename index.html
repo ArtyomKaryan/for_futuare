@@ -1,209 +1,305 @@
 <!DOCTYPE html>
-<html lang="hy">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>For Futuare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Future - Financial Education Platform</title>
+    <meta name="description"
+        content="Learn financial literacy with our comprehensive guides, calculators, and resources">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="global.css" />
     <link rel="icon" href="./Images/Logo.png" type="img/x-icon" />
 </head>
 
 <body>
-
-    <header>
+    <!-- Header with Navigation -->
+    <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo text-typing">For Futuare</a>
+            <a href="#" class="logo text-typing">For Future</a>
 
-            <!-- Desktop Menu -->
-            <ul class="desktop-menu">
-                <li><a href="#" id="home-link">Home</a></li>
-                <li><a id="about-link" href="#">About</a></li>
-                <li><a id="calc" href="#">Calculator</a></li>
-                <li><a id="fin_1" href="#">FinDef–1</a></li>
-                <li><a id="fin_2" href="#">FinDef–2</a></li>
-            </ul>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="desktop-menu">
+                    <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-section="calculators">Calculators</a></li>
+                    <li><a href="#" class="nav-link" data-section="fin-def-1">FinDef–1</a></li>
+                    <li><a href="#" class="nav-link" data-section="fin-def-2">FinDef–2</a></li>
+                </ul>
+            </nav>
 
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
         </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <div class="mobile-menu-header">
-                <a href="#" class="logo">Logo</a>
-                <button class="close-btn">×</button>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <button class="close-btn" aria-label="Close menu">×</button>
             </div>
             <ul class="mobile-menu-list">
-                <li><a href="#">Home</a></li>
-                <li><a id="about-link" href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#" class="nav-link" data-section="calculators">Calculators</a></li>
+                <li><a href="#" class="nav-link" data-section="fin-def-1">FinDef–1</a></li>
+                <li><a href="#" class="nav-link" data-section="fin-def-2">FinDef–2</a></li>
             </ul>
-        </div>
+        </nav>
+        <div class="overlay"></div>
     </header>
 
-    <section>
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <div class="slide-content"
-                    style="background-image: url('./Images/2018-07-09-WhatExpectEarnFinanceDegree-ThinkstockPhotos-494940062.jpg');">
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero-slider" id="home">
+            <div class="slideshow-container">
+                <div class="slide fade active">
+                    <div class="slide-content"
+                        style="background-image: url('./Images/2018-07-09-WhatExpectEarnFinanceDegree-ThinkstockPhotos-494940062.jpg');">
+                        <div class="slide-overlay">
+                            <h2>Master Your Finances</h2>
+                            <p>Learn essential financial concepts to secure your future</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content" style="background-image: url('./Images/summer-finance-1024x576.png');">
+                <div class="slide fade">
+                    <div class="slide-content" style="background-image: url('./Images/summer-finance-1024x576.png');">
+                        <div class="slide-overlay">
+                            <h2>Smart Budgeting Tools</h2>
+                            <p>Take control of your money with our powerful calculators</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content" style="background-image: url('./Images/financial-accounting.webp');">
+                <div class="slide fade">
+                    <div class="slide-content" style="background-image: url('./Images/financial-accounting.webp');">
+                        <div class="slide-overlay">
+                            <h2>Financial Education</h2>
+                            <p>Expand your knowledge with our comprehensive guides</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content" style="background-image: url('./Images/free-423retger.jpg');">
+                <div class="slide fade">
+                    <div class="slide-content" style="background-image: url('./Images/free-423retger.jpg');">
+                        <div class="slide-overlay">
+                            <h2>Plan for Success</h2>
+                            <p>Start building wealth with our expert financial advice</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Navigation arrows -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- Navigation arrows -->
+                <button class="slider-nav prev" aria-label="Previous slide">&#10094;</button>
+                <button class="slider-nav next" aria-label="Next slide">&#10095;</button>
 
-            <!-- Dots/bullets/indicators -->
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="middle">
-
-
-
-        <div class="middleBlock2">
-            <h1>Featured Products</h1>
-            <div class="middleBlock2container">
-                <div>
-                    <img src="./Images/fin_info.png" alt="Product 1" />
-                    <a href="https://www.fininfo.am/" target="_blank">Fininfo</a>
+                <!-- Dots/bullets/indicators -->
+                <div class="dots-container">
+                    <span class="dot active" aria-label="Slide 1"></span>
+                    <span class="dot" aria-label="Slide 2"></span>
+                    <span class="dot" aria-label="Slide 3"></span>
+                    <span class="dot" aria-label="Slide 4"></span>
                 </div>
-                <div>
-                    <img src="./Images/YNAB.png" alt="Product 2" />
-                    <a href="https://www.ynab.com/" target="_blank">YNAB</a>
-                </div>
-                <div>
-                    <img src="./Images/Monarch_Money.png" alt="Product 3" />
-                    <a href="https://www.monarchmoney.com/" target="_blank">Monarch Money</a>
-                </div>
-                <div>
-                    <img src="./Images/Capture.PNG" alt="Product 4" />
-                    <a href="https://www.spendee.com/" target="_blank">Spendee</a>
-                </div>
-            </div>
-
-
-            <!-- Top Definitions Section with One Image -->
-            <section class="definitions-wrappe-box" id="fin_def_one">
-                <div class="definitions-image">
-                    <img src="./Images/defintion.jpg">
-                </div>
-                <div id="fin-def-1" class="definitions-section-m">
-                    <h2>Financial Definitions – Part 1</h2>
-                    <ul class="definitions-list">
-                        <li><strong>Budget:</strong> A financial plan that outlines expected income and expenses over a
-                            specific period of time.</li>
-                        <li><strong>Income:</strong> The total amount of money received from various sources such as
-                            salary, investments, or business activities.</li>
-                        <li><strong>Expenses:</strong> The costs incurred for goods, services, or obligations during a
-                            certain period.</li>
-                        <li><strong>Financial Planning:</strong> The process of setting financial goals and creating
-                            strategies to achieve them.</li>
-                        <li><strong>Savings:</strong> The portion of income not spent and set aside for future use.</li>
-                        <li><strong>Financial Discipline:</strong> Managing money responsibly to ensure that spending
-                            does not exceed income.</li>
-                        <li><strong>Priority-Based Budget:</strong> Spending is allocated based on the importance of
-                            each category or need.</li>
-                        <li><strong>Budget Deficit:</strong> A financial situation where expenses exceed income.</li>
-                        <li><strong>Budget Surplus:</strong> A financial situation where income exceeds expenses.</li>
-                        <li><strong>Personal Budget:</strong> A plan for managing an individual’s income and expenses.
-                        </li>
-                        <li><strong>Emergency Fund:</strong> A savings reserve for unexpected expenses like job loss or
-                            medical issues.</li>
-                    </ul>
-                </div>
-            </section>
-
-
-
-
-            <div class="button-group">
-                <button id="calc1">Calculator 1</button>
-                <button id="calc2">Calculator 2</button>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <div id="calc_res">
-        <iframe id="calc1_res" src="./Calculator 1/index.html" height="700" width="100%" frameBorder="0"
-            title="Iframe Example"></iframe>
-        <iframe id="calc2_res" src="./Calculator 2/index.html" height="700" width="100%" frameBorder="0"
-            title="Iframe Example"></iframe>
-    </div>
-    </section>
-
-
-    <section id="fin_def_two">
-        <h2 class="fin-title">Financial Definitions – Part 2</h2>
-
-        <div class="section-bg">
-            <img src="https://www.freshbooks.com/wp-content/uploads/2022/11/3ecbb113-e6a9-4e88-a3eb-c7ccad60e961-1280x569.png"
-                alt="Financial Concepts Illustration">
-        </div>
-        <!-- Bottom Definitions Section with One Image -->
-        <section class="definitions-wrapper">
-            <!-- <div class="definitions-image">
-        <img class="financialeducatorscouncil" src="https://www.financialeducatorscouncil.org/wp-content/uploads/2019/04/Suggestions-for-Financial-Literacy-Definition-Qualifications.png" alt="Financial Concepts Illustration">
-    </div> -->
-            <div class="definitions-section">
-                <ul class="definitions-list">
-                    <li><strong>Financial Fraud:</strong> Intentional deception involving financial transactions for
-                        personal gain.</li>
-                    <li><strong>Fixed Expenses:</strong> Regular costs that don’t vary, such as rent or insurance.</li>
-                    <li><strong>Variable Expenses:</strong> Costs that change each month, like groceries or bills.</li>
-                    <li><strong>Cash Flow:</strong> The movement of money in and out over a given period.</li>
-                    <li><strong>Debt Management:</strong> Strategies for handling and repaying debt effectively.</li>
-                    <li><strong>Net Worth:</strong> The value of assets minus liabilities.</li>
-               
-                </ul>
-                 <ul class="definitions-list">
-                    <li><strong>Investment:</strong> Allocating money to earn returns through profit or interest.</li>
-                    <li><strong>Credit Score:</strong> A number showing a person’s creditworthiness based on history.
-                    </li>
-                    <li><strong>Financial Literacy:</strong> The ability to understand and apply financial concepts.
-                    </li>
-                    <li><strong>Overspending:</strong> Spending more than your available budget or income.</li>
-                    <li><strong>Passive Income:</strong> Income earned with minimal effort, like from investments.</li>
-                </ul>
             </div>
         </section>
 
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Financial Tools</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./Images/fin_info.png" alt="Fininfo Logo" loading="lazy" />
+                        <h3>Fininfo</h3>
+                        <p>Comprehensive financial data and market analysis</p>
+                        <a href="https://www.fininfo.am/" target="_blank" rel="noopener noreferrer" class="btn">Visit
+                            Site</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./Images/YNAB.png" alt="YNAB Logo" loading="lazy" />
+                        <h3>YNAB</h3>
+                        <p>Popular budgeting app for personal finance</p>
+                        <a href="https://www.ynab.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit
+                            Site</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./Images/Monarch_Money.png" alt="Monarch Money Logo" loading="lazy" />
+                        <h3>Monarch Money</h3>
+                        <p>All-in-one money management platform</p>
+                        <a href="https://www.monarchmoney.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn">Visit Site</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./Images/Capture.PNG" alt="Spendee Logo" loading="lazy" />
+                        <h3>Spendee</h3>
+                        <p>Simple expense tracking and budgeting</p>
+                        <a href="https://www.spendee.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit
+                            Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Financial Definitions Section 1 -->
+        <section class="financial-definitions" id="fin-def-1">
+            <div class="container">
+                <div class="definition-content">
+                    <div class="definition-image">
+                        <img src="./Images/defintion.jpg" alt="Financial planning illustration" loading="lazy">
+                    </div>
+                    <div class="definition-text">
+                        <h2 class="section-title">Financial Definitions – Part 1</h2>
+                        <ul class="definition-list">
+                            <li><strong>Budget:</strong> A financial plan that outlines expected income and expenses
+                                over a specific period of time.</li>
+                            <li><strong>Income:</strong> The total amount of money received from various sources such as
+                                salary, investments, or business activities.</li>
+                            <li><strong>Expenses:</strong> The costs incurred for goods, services, or obligations during
+                                a certain period.</li>
+                            <li><strong>Financial Planning:</strong> The process of setting financial goals and creating
+                                strategies to achieve them.</li>
+                            <li><strong>Savings:</strong> The portion of income not spent and set aside for future use.
+                            </li>
+                            <li><strong>Financial Discipline:</strong> Managing money responsibly to ensure that
+                                spending does not exceed income.</li>
+                            <li><strong>Priority-Based Budget:</strong> Spending is allocated based on the importance of
+                                each category or need.</li>
+                            <li><strong>Budget Deficit:</strong> A financial situation where expenses exceed income.
+                            </li>
+                            <li><strong>Budget Surplus:</strong> A financial situation where income exceeds expenses.
+                            </li>
+                            <li><strong>Personal Budget:</strong> A plan for managing an individual's income and
+                                expenses.</li>
+                            <li><strong>Emergency Fund:</strong> A savings reserve for unexpected expenses like job loss
+                                or medical issues.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div id="about">
-            <h2>About Us</h2>
-            <p>Content about us...</p>
+        <!-- Financial Calculators Section -->
+        <section class="calculators-section" id="calculators">
+            <div class="container">
+                <h2 class="section-title">Financial Calculators</h2>
+                <div class="calculator-tabs">
+                    <button class="tab-btn active" data-tab="calc1">Savings Calculator</button>
+                    <button class="tab-btn" data-tab="calc2">Budget Calculator</button>
+                </div>
+                <div class="calculator-content">
+                    <div id="calc1-content" class="calc-content active">
+                        <iframe id="calc1-iframe" src="./Calculator 1/index.html" height="700" width="100%"
+                            frameborder="0" title="Savings Calculator" loading="lazy"></iframe>
+                    </div>
+                    <div id="calc2-content" class="calc-content">
+                        <iframe id="calc2-iframe" src="./Calculator 2/index.html" height="700" width="100%"
+                            frameborder="0" title="Budget Calculator" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Definitions Section 2 -->
+        <section class="financial-definitions dark-bg" id="fin-def-2">
+            <div class="container">
+                <h2 class="section-title">Financial Definitions – Part 2</h2>
+                <div class="full-width-image">
+                    <img src="https://www.freshbooks.com/wp-content/uploads/2022/11/3ecbb113-e6a9-4e88-a3eb-c7ccad60e961-1280x569.png"
+                        alt="Financial concepts illustration" loading="lazy">
+                </div>
+                <div class="definition-columns">
+                    <ul class="definition-list">
+                        <li><strong>Financial Fraud:</strong> Intentional deception involving financial transactions for
+                            personal gain.</li>
+                        <li><strong>Fixed Expenses:</strong> Regular costs that don't vary, such as rent or insurance.
+                        </li>
+                        <li><strong>Variable Expenses:</strong> Costs that change each month, like groceries or bills.
+                        </li>
+                        <li><strong>Cash Flow:</strong> The movement of money in and out over a given period.</li>
+                        <li><strong>Debt Management:</strong> Strategies for handling and repaying debt effectively.
+                        </li>
+                        <li><strong>Net Worth:</strong> The value of assets minus liabilities.</li>
+                    </ul>
+                    <ul class="definition-list">
+                        <li><strong>Investment:</strong> Allocating money to earn returns through profit or interest.
+                        </li>
+                        <li><strong>Credit Score:</strong> A number showing a person's creditworthiness based on
+                            history.</li>
+                        <li><strong>Financial Literacy:</strong> The ability to understand and apply financial concepts.
+                        </li>
+                        <li><strong>Overspending:</strong> Spending more than your available budget or income.</li>
+                        <li><strong>Passive Income:</strong> Income earned with minimal effort, like from investments.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-title">About For Future</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>For Future is a financial education platform dedicated to helping individuals achieve
+                            financial literacy and independence. Our mission is to provide accessible, practical
+                            financial knowledge to everyone, regardless of their background or experience level.</p>
+                        <p>We believe that financial education is the foundation of personal and professional success.
+                            By understanding basic financial concepts and developing good money habits, anyone can take
+                            control of their financial future.</p>
+                        <p>Our team consists of financial experts, educators, and technologists who are passionate about
+                            making financial knowledge understandable and actionable.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://royalwise.com/wp-content/uploads/collaboration-documents-financial-with-business-team-working-together-accounting-office-from-meeting-data-finance-planning-with-man-woman-accounting-group-work_590464-121208.png"
+                            alt="Team working on financial planning" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">For Future</a>
+                    <p>Empowering your financial journey through education and tools.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-section="calculators">Calculators</a></li>
+                        <li><a href="#" class="nav-link" data-section="fin-def-1">FinDef–1</a></li>
+                        <li><a href="#" class="nav-link" data-section="fin-def-2">FinDef–2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@forfuture.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Finance St, Money City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 For Future. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <script src="js/script.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/index.js"></script>
-
+    <script src="js/index.js"></script>
+    <!-- <script src="js/script.js"></script>
+    <script src="js/slider.js"></script> -->
 
 </body>
 
